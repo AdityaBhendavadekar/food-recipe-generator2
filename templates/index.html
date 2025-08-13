@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Generation from Food Image</title>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo"> 
+        <img src="https://via.placeholder.com/40" alt="Logo" style="margin-right:8px;">
+        Plateful.AI
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Left side -->
+    <div>
+        <div class="upload-box" id="upload-box">
+            <i class="bi bi-cloud-upload-fill" id="upload-icon"></i>
+            <p id="upload-text">No file chosen, yet!</p>
+        </div>
+
+        <!-- Hidden file input -->
+        <input type="file" id="file-input" accept="image/*">
+
+        <button class="btn" id="upload-btn">UPLOAD A FOOD IMAGE</button>
+        <button class="btn">CHOOSE FROM SAMPLE IMAGE</button>
+    </div>
+
+    <!-- Right side -->
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/cover.jpg') }}" alt="Food Image">
+        <div class="card-content">
+            <h2>Recipe Generation from Food Image</h2>
+            <p>Upload any Food Image</p>
+            <p>Our Model will predict its Food Name, Ingredients and its Recipe.</p>
+            <p class="processing-time">Processing time : Approx 40s</p>
+        </div>
+    </div>
+</div>
+
+<!-- External JS -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
