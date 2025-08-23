@@ -12,3 +12,5 @@
 - FATSECRET_CLIENT_ID=
 - FATSECRET_CLIENT_SECRET=
 
+- create these secrets on following link: https://platform.fatsecret.com/my-account/dashboard
+
