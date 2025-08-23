@@ -8,6 +8,7 @@
     - Go to `http://localhost:5000/` in your browser
  
 # Env file setup:
-- create .env file
+### create .env file
 - FATSECRET_CLIENT_ID=
 - FATSECRET_CLIENT_SECRET=
+
