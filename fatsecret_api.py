@@ -1,8 +1,8 @@
 import os
 import requests
 
-FATSECRET_KEY = os.getenv("FATSECRET_CLIENT_ID")      # 👈 set in .env
-FATSECRET_SECRET = os.getenv("FATSECRET_CLIENT_SECRET")  # 👈 set in .env
+FATSECRET_KEY = 
+FATSECRET_SECRET =
 
 BASE_URL = "https://platform.fatsecret.com/rest/server.api"
 TOKEN_URL = "https://oauth.fatsecret.com/connect/token"
