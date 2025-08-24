@@ -11,9 +11,7 @@
  
 # Env file setup:
 ### create .env file
-- FATSECRET_CLIENT_ID=
-- FATSECRET_CLIENT_SECRET=
-
-- create these secrets on following link: https://platform.fatsecret.com/my-account/dashboard
+- Add the following line to the .env file
+  - `GEMINI_API_KEY=your_api_key_here`
 
 
