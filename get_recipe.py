@@ -8,7 +8,7 @@ import time
 # you would manage API keys securely, for example, using environment variables.
 # For this example, we'll use an empty string, as the Canvas environment
 # will automatically provide it at runtime.
-GEMINI_API_KEY = "AIzaSyCH4zOy5PDeFy81ayqA6A64CEJ6Whm1JwU"
+GEMINI_API_KEY = ""
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent"
 
 def search_recipes(query, max_results=2):
