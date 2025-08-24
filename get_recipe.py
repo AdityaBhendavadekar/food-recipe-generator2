@@ -2,14 +2,19 @@ import os
 import requests
 import json
 import time
+from dotenv import load_dotenv
 
 # --- Gemini API Configuration ---
 # IMPORTANT: This API key is a placeholder. In a real-world application,
 # you would manage API keys securely, for example, using environment variables.
 # For this example, we'll use an empty string, as the Canvas environment
 # will automatically provide it at runtime.
-GEMINI_API_KEY = ""
+load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent"
+
+print(GEMINI_API_KEY)
 
 def search_recipes(query, max_results=2):
     """
