@@ -1,8 +1,8 @@
 import os
 import requests
 
-FATSECRET_KEY = 
-FATSECRET_SECRET =
+FATSECRET_KEY = "315965d6b03841a6925a5d65ae1ef5ec"
+FATSECRET_SECRET = "81d0083feb9546949dbef8d3d5039175"
 
 BASE_URL = "https://platform.fatsecret.com/rest/server.api"
 TOKEN_URL = "https://oauth.fatsecret.com/connect/token"

@@ -1,166 +1,279 @@
+/* Body and Font */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fdfdfd;
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #6c63ff;
-  padding: 12px 20px;
-  color: white;
+    background-color: #6c63ff;
+    padding: 12px 24px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .navbar .logo {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
 }
 .navbar .logo img {
-  border-radius: 50%;
-  margin-right: 10px;
+    border-radius: 50%;
+    margin-right: 12px;
 }
 .navbar .nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+.navbar .nav-links a:hover {
+    color: #e0e0e0;
 }
 
-/* Main section */
+/* Main Container */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 30px;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
 }
 
-/* Upload box */
+/* Upload Box */
 .upload-box {
-  border: 2px dashed #bbb;
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #666;
-  font-size: 16px;
-  text-align: center;
-  overflow: hidden;
-  margin-bottom: 15px;
-  transition: all 0.3s ease-in-out;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
 }
 .upload-box:hover {
-  border-color: #6c63ff;
+    border-color: #6c63ff;
 }
 .upload-box i {
-  font-size: 60px;
-  color: #6c63ff;
-  margin-bottom: 10px;
+    font-size: 64px;
+    color: #6c63ff;
+    margin-bottom: 8px;
 }
 .upload-box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 /* Buttons */
 .btn {
-  display: block;
-  width: 300px;
-  padding: 12px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-  background: linear-gradient(to right, #6c63ff, #8b5cf6);
-  color: white;
-  transition: 0.3s;
+    display: block;
+    width: 320px;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(to right, #6c63ff, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 .btn:disabled {
-  background: #aaa;
-  cursor: not-allowed;
+    background: #a1a1aa;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 .btn:hover:not(:disabled) {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 /* Loader */
 .loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #6c63ff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 15px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #6c63ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
 }
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* Right side card */
+/* Right side card (Main Recipe Display) */
 .card {
-  width: 500px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .card img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 300px;
 }
 .card-content {
-  padding: 15px;
+    padding: 24px;
 }
 .card-content h2 {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #6c63ff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #4a5568;
 }
 .card-content p {
-  margin: 5px 0;
+    margin: 8px 0;
+    color: #718096;
 }
 .processing-time {
-  font-size: 14px;
-  color: gray;
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 12px;
 }
 
-/* Result card */
+/* Result Card */
 .result-card {
-  width: 300px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  background: #fafafa;
-  margin-top: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 320px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    background: #f9fafb;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 .result-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #6c63ff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6c63ff;
 }
+
+/* Prediction List Items (New Styles) */
 .result-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .result-card ul li {
-  padding: 8px 0;
-  font-size: 16px;
-  border-bottom: 1px solid #eee;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result-card ul li:last-child {
+    border-bottom: none;
+}
+.result-card ul li:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-2px);
+}
+.result-card ul li.selected {
+    background-color: #6c63ff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.result-card ul li.selected b {
+    color: white;
+}
+.result-card ul li span {
+    font-weight: 500;
+    color: #6b7280;
+}
+.result-card ul li.selected span {
+    color: #e5e7eb;
+}
+
+/* New CSS to enable scrolling on the recipe container */
+#scrollable-recipes {
+  max-height: 400px; /* Adjust this value as needed */
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+/* Recipe Display */
+.recipe-card {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+}
+.recipe-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #6c63ff;
+    padding-bottom: 8px;
+}
+.recipe-card h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c63ff;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.recipe-card ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+    color: #4b5563;
+}
+.recipe-card ul li {
+    margin-bottom: 4px;
+}
+.recipe-card ol {
+    list-style: decimal;
+    margin: 0;
+    padding-left: 20px;
+    color: #4b5563;
+}
+.recipe-card ol li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+    }
+    .upload-box, .btn, .result-card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
